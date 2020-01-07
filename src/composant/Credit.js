@@ -13,40 +13,32 @@ export default class Credit extends Component {
     }
     fnumber=(e)=>{
         let regexx = /^[0-9]*$/ ;
-        if (regexx.test(e.target.value.length <=19))
+        
+        if (regexx.test(e.target.value))
+        
         this.setState({numero:e.target.value})
         else 
-        
-                 {
-
-
-                 e.target.value= this.state.numero.substr(0, 19)
-                 }
-    //     else 
-    //     {
-    //         (e.target.value)=""
-    //         this.setState({numero:""})
-    //    }
+        {
+            (e.target.value)=""
+            this.setState({numero:""})
+       }
 
     }
     fnom=(e)=>{
         let reg=/^[a-zA-Z ]+$/;
-        if (reg.test(e.target.value.length <=20))
+        if (reg.test(e.target.value))
         this.setState({nom:e.target.value})
-    //     else 
-    //     {
-    //         (e.target.value)=""
-    //         this.setState({nom:""})
-    //    }
+        else 
+        {
+            (e.target.value)=""
+            this.setState({nom:""})
+       }
 
     }
      mois=(da)=>
 {let a=String(da)
 let str1=a[0]+a[1]
-let st=a[0]
-
-if((a.slice(0,1)>=2)||(a.slice(0,2)>12))
-{return "";}
+if((a.slice(0,1)>1)||(a.slice(0,2)>12)){return "";}
 // else if(str1<10)
 // {str1.padStart(2,"0")}
 let str2=a[2]+a[3]
@@ -86,8 +78,8 @@ return da.slice(0,2)+"/"+da.slice(2)
                     </div>
                     </div>
         <div className="right">
-                    <input type="text" onChange={this.fnumber} className="butt" />
-                    <input type="text" onChange={this.fnom} className="butt" />
+                    <input type="text" onChange={this.fnumber} className="butt" maxlength="16"/>
+                    <input type="text" onChange={this.fnom} className="butt" maxlength="20"/>
                     <input type="text"onChange={this.fdate} className="butt"maxlength="4" />
         </div>
 
