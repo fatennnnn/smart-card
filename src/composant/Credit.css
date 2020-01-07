@@ -1,0 +1,58 @@
+.cards{
+    width:400px;
+    height: 270px;
+    background-color:#124164;
+    border-radius: 10px;
+    /* position: absolute; */
+
+    
+
+
+
+}
+
+.pleft{
+    /* position: absolute; */
+   text-align: right;
+   color:white;
+   font-size: 18px;
+   margin-right: 10px;
+}
+
+.cards-left{
+    display:flex;
+    flex-direction: column;
+}
+.pleftpa{
+    text-align: left;
+    margin-left: 10px;
+
+}
+ /* .pleftimg{
+
+padding-top:30px ;} */
+/* .plefta{
+margin-left: 0px;} */
+.partsecond{
+    display:flex;
+    justify-content: space-between;
+} 
+.partsec1{
+    margin-right: -300px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    margin-top: 80px;
+    margin-left: 30px;
+}
+.tot{
+    display: flex;
+}
+.butt{
+    margin-top: 10px;
+    border-radius: 3px;
+
+    
+}
